@@ -1,0 +1,285 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8346,        276]
+NotebookOptionsPosition[      7467,        241]
+NotebookOutlinePosition[      8043,        262]
+CellTagsIndexPosition[      8000,        259]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Clifford Algebra", "Title",
+ CellChangeTimes->{{3.6574334678604517`*^9, 3.657433472532483*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Basic Definitions", "Chapter",
+ CellChangeTimes->{{3.65743348091928*^9, 3.6574334831760073`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Pauli Matrices", "Subchapter",
+ CellChangeTimes->{{3.657433485752*^9, 3.657433490351881*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "1", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "2", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "\[ImaginaryI]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[ImaginaryI]", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Tau]", "[", "3", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", 
+       RowBox[{"-", "1"}]}], "}"}]}], "}"}]}], ";"}]}], "Input",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{{3.6574333025690193`*^9, 3.65743346339167*^9}, 
+   3.657433801343689*^9, {3.657434451441626*^9, 3.657434461653393*^9}, {
+   3.6574398943794107`*^9, 3.657439931617154*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["d=4 2-components", "Subchapter",
+ CellChangeTimes->{{3.657433494190493*^9, 3.657433498671226*^9}, {
+  3.657433749611046*^9, 3.657433753312886*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "(",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Sigma]", "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[")", 
+    RowBox[{"\[Alpha]", 
+     OverscriptBox["\[Beta]", "."]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ,  (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    OverscriptBox["\[Sigma]", "~"], "\[Mu]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[")", 
+    RowBox[{
+     OverscriptBox["\[Alpha]", "."], "\[Beta]"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Subsection",
+ CellChangeTimes->{{3.6574400282486963`*^9, 3.65744026718931*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Sigma]", "[", "1", "]"}], "=", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], "*", 
+    RowBox[{"\[Tau]", "[", "1", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Sigma]", "[", "2", "]"}], "=", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], "*", 
+    RowBox[{"\[Tau]", "[", "2", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Sigma]", "[", "3", "]"}], "=", 
+   RowBox[{
+    RowBox[{"-", "\[ImaginaryI]"}], "*", 
+    RowBox[{"\[Tau]", "[", "3", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[Sigma]", "[", "4", "]"}], "=", 
+    RowBox[{"DiagonalMatrix", "[", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"===", "===", "===", "===", "===", "===", "===", "=="}], "=", 
+    "==="}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    OverscriptBox["\[Sigma]", "~"], "[", "1", "]"}], "=", 
+   RowBox[{"\[ImaginaryI]", "*", 
+    RowBox[{"\[Tau]", "[", "1", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    OverscriptBox["\[Sigma]", "~"], "[", "2", "]"}], "=", 
+   RowBox[{"\[ImaginaryI]", "*", 
+    RowBox[{"\[Tau]", "[", "2", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    OverscriptBox["\[Sigma]", "~"], "[", "3", "]"}], "=", 
+   RowBox[{"\[ImaginaryI]", "*", 
+    RowBox[{"\[Tau]", "[", "3", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     OverscriptBox["\[Sigma]", "~"], "[", "4", "]"}], "=", 
+    RowBox[{"DiagonalMatrix", "[", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"===", "===", "===", "===", "===", "===", "===", "=="}], "=", 
+    "==="}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"m", "=", "1"}], ",", 
+    RowBox[{"m", "<", "5"}], ",", 
+    RowBox[{"m", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"n", "=", "1"}], ",", 
+      RowBox[{"n", "<", "5"}], ",", 
+      RowBox[{"n", "++"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\[Sigma]2", "[", 
+        RowBox[{"m", ",", "n"}], "]"}], "=", 
+       RowBox[{
+        FractionBox["1", "2"], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"\[Sigma]", "[", "m", "]"}], ".", 
+           RowBox[{
+            OverscriptBox["\[Sigma]", "~"], "[", "n", "]"}]}], "-", 
+          RowBox[{
+           RowBox[{"\[Sigma]", "[", "n", "]"}], ".", 
+           RowBox[{
+            OverscriptBox["\[Sigma]", "~"], "[", "m", "]"}]}]}], ")"}]}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"===", "===", "===", "===", "===", "===", "===", "=="}], "=", 
+    "==="}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"m", "=", "1"}], ",", 
+   RowBox[{"m", "<", "5"}], ",", 
+   RowBox[{"m", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"n", "=", "1"}], ",", 
+     RowBox[{"n", "<", "5"}], ",", 
+     RowBox[{"n", "++"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       OverscriptBox["\[Sigma]2", "~"], "[", 
+       RowBox[{"m", ",", "n"}], "]"}], "=", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           OverscriptBox["\[Sigma]", "~"], "[", "m", "]"}], ".", 
+          RowBox[{"\[Sigma]", "[", "n", "]"}]}], "-", 
+         RowBox[{
+          RowBox[{
+           OverscriptBox["\[Sigma]", "~"], "[", "n", "]"}], ".", 
+          RowBox[{"\[Sigma]", "[", "m", "]"}]}]}], ")"}]}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}], "Input",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.657347773864859*^9, {3.6574336445049477`*^9, 3.657433786701687*^9}, {
+   3.657433851573881*^9, 3.657433879865686*^9}, {3.657433918837923*^9, 
+   3.657434094567752*^9}, {3.6574342032638617`*^9, 3.657434293753244*^9}, {
+   3.657434485007918*^9, 3.657434492918528*^9}, {3.657434590053692*^9, 
+   3.657434667216666*^9}, {3.657460392608436*^9, 3.657460513753389*^9}, {
+   3.6576045464574633`*^9, 3.6576045591088142`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{720, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "My Style.nb"]]}, Visible -> False, 
+  FrontEndVersion -> 
+  "10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, 2014)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 101, 1, 92, "Title"],
+Cell[CellGroupData[{
+Cell[706, 27, 103, 1, 65, "Chapter"],
+Cell[CellGroupData[{
+Cell[834, 32, 99, 1, 60, "Subchapter"],
+Cell[936, 35, 1086, 35, 98, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2059, 75, 153, 2, 60, "Subchapter"],
+Cell[CellGroupData[{
+Cell[2237, 81, 706, 25, 54, "Subsection"],
+Cell[2946, 108, 4469, 127, 740, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
